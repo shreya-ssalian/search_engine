@@ -1,3 +1,11 @@
+
+from scraper import scrape_faqs
+print("Updating FAQs from website...\n")
+
+scrape_faqs()
+
+print("Latest FAQs loaded.\n")
+
 print("DEBUG: New version running")
 
 from sentence_transformers import SentenceTransformer, util
