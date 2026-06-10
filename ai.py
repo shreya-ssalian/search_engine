@@ -44,21 +44,9 @@ print("Model loaded!")
 
 # Extract and normalize questions for embedding
 questions = [faq["question"].split(' ', 1)[-1].lower().strip() for faq in faqs]
-#EMbeddings
-import torch
-import os
-
-EMBEDDINGS_FILE = "embeddings.pt"
-
-if os.path.exists(EMBEDDINGS_FILE):
-    print("Loading saved embeddings...")
-    question_embeddings = torch.load(EMBEDDINGS_FILE)
-    print("Embeddings loaded instantly!")
-else:
-    print("Generating embeddings for first time...")
-    question_embeddings = model.encode(questions, convert_to_tensor=True)
-    torch.save(question_embeddings, EMBEDDINGS_FILE)
-    print(f"Done! {len(questions)} questions embedded and saved!\n")
+print("Generating embeddings...")
+question_embeddings = model.encode(questions, convert_to_tensor=True)
+print(f"Done! {len(questions)} questions embedded.\n")
 
 def search(user_query, top_k=3):
     #user_query = re.sub(r"[^\w\s]", "", user_query.lower().strip())
@@ -90,7 +78,7 @@ def search(user_query, top_k=3):
             # print(f"Score : {score}")
             # print(f"Q     : {faqs[idx]['question']}")
             # print(f"A     : {faqs[idx]['answer']}")
-            # print("\nI found this information that may help:\n")
+            print("\nI found this information that may help:\n")
             print(faqs[idx]['answer'])
             print("-" * 50)
 

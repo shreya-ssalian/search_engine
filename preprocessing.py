@@ -77,7 +77,10 @@ custom_fillers = {
 
 #words that should NEVER be corrected
 protected_words = {
-    "Vicharanashala","VINS","VISE","VLED","ViBe","Samagama","Yaksha","Rosetta","Spurti","SP","Points","sp","points","Summership","Vinternship","Pinternship","Annam","Bronze","Silver","Gold","Platinum","Health","HP","Yaksha","Chat","Talk","to","Yaksha","Interact","with","Yaksha","#escalate","#escalate-ViBe","#vibe-email","ViBe","Platform","ViBe","Learning","Platform","Linear","Progression","Access","Restricted","Quiet","Helper","Honor","Code","Participation","Agreement","NOC","Card","Offer","Letter","Card","Announcements","Section","Zoom","Standup","Daily","Standup","Kickoff","Orientation","Viva","Route","AI","Fundamentals","Penalty","Score","Study","Corner","Summership","2026","Vicharanashala","Lab","Vicharanashala","Lab","for","Education","Design","VLED","Lab","Yaksha-mini","Voice","Samagama"
+    "vins",
+    "yaksha",
+    "iit",
+    "ropar"
 }
 
 spell = SpellChecker()
